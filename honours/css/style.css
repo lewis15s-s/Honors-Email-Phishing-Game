@@ -1,0 +1,438 @@
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	background-color: grey;
+}
+
+/* desktop */
+.border {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	position: absolute;
+	top: 5vh;
+	left: 5vw;
+	width: 90vw;
+	height: 90vh;
+	border: 8px solid #333;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	background-color: #0078D7;
+}
+
+.info_box {
+    margin-top: 20px;
+    padding: 15px;
+    width: 600px;
+    background: white;
+    border: 2px solid #333;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    max-height: 600px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.email_icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 10vw;
+    margin: 0;
+    padding: 0;
+}
+
+.mail_button {
+    width: 100%;
+    height: 20vh;
+    display: block;
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 16px;
+	color: white;
+}
+
+/*Consent text window*/
+.scrollable-consent {
+    overflow-y: auto;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 450px;
+    margin-top: 15px;
+}
+
+/* Consent Button Section */
+.consentButton {
+    margin-top: 20px;
+    padding: 15px;
+    width: 300px;
+    background: white;
+    border: 2px solid #333;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;;
+}
+
+.consentButton input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.consentButton label {
+    font-size: 14px;
+}
+
+.consentButton .continue-button {
+    display: inline-block;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-top: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Active button when checkbox is checked */
+.consentButton .continue-button.active {
+    cursor: pointer;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ID Entry Form */
+.user_id {
+    margin-top: 20px;
+    padding: 15px;
+    width: 300px;
+    background: white;
+    border: 2px solid #333;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.user_id input {
+    margin: 8px 0;
+    padding: 5px;
+    width: 200px;
+}
+
+.user_id input[type="submit"] {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/*Login box*/
+.login {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.centered-label {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.login input {
+    margin: 8px 0;
+    padding: 5px;
+    width: 200px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+}
+
+.login input[type="submit"] {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+
+    display: block;
+    margin: 0 auto;
+}
+
+
+/*login approval box*/
+.log_aprv {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    text-align: center;
+    visibility: hidden;
+}
+
+.log_aprv[style*="display: block"] {
+    visibility: visible;
+}
+
+
+.log_aprv input[type="submit"] {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 10px;
+    width: 100px;
+}
+
+.login input[type="submit"]:hover,
+.email_client input[type="submit"]:hover,
+.log_aprv input[type="submit"]:hover {
+    background: #444;
+}
+
+.log_aprv label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/*BF log approve*/
+.log_aprv_fake {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    text-align: center;
+    visibility: hidden;
+}
+
+.log_aprv_fake[style*="display: block"] {
+    visibility: visible;
+}
+
+.log_aprv_fake input[type="submit"] {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 10px;
+    width: 100px;
+}
+
+.log_aprv_fake input[type="submit"]:hover {
+    background: #444;
+}
+
+.log_aprv_fake label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/*Email Client*/
+.email_client {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 5px solid #333;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    padding-bottom: 50px;
+}
+
+.checking-mail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: none;
+    color: #333;
+    z-index: 10;
+}
+
+
+.email_client label {
+    text-align: left;
+    display: block;
+    background-color: navy;
+    color: white;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    -webkit-text-stroke: 2px black;
+    line-height: 40px;
+    padding: 2%;
+}
+
+.email_client input[type="button"] {
+    text-align: left;
+    display: block;
+    width: 100%;
+    color: lightgray;
+    font-size: 20px;
+    -webkit-text-stroke: 2px black;
+    line-height: 40px;
+    padding: 2%;
+}
+
+.email_client input[type="submit"] {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 10px;
+    width: 200px;
+    font-size: 20px;
+    display: none;
+    bottom: 10px;
+}
+
+.emailButtons {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    gap: 50%;
+    bottom: 10px;
+    left: 20%;
+    right: 20%;
+}
+
+#randomEmail {
+    width: 70%;
+    height: auto;
+    max-height: 70%;
+    object-fit: contain;
+    display: none;
+    border: 2px solid #333;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+
+/*results page stylings*/
+.results-background {
+    background-color: grey;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.result-container {
+    max-width: 600px;
+    margin: 5vh auto;
+    background: white;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+.score-heading {
+    text-align: center;
+    margin-top: 0;
+}
+
+.result-summary {
+    font-size: 16px;
+}
+
+.no-mistakes {
+    font-size: 18px;
+    color: green;
+    text-align: center;
+}
+
+.missed-header {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.missed-list {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.missed-item {
+    margin-bottom: 10px;
+}
+
+.security-warning {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.retry-button, .finish-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.retry-button:hover, .finish-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.retry-button:active, .finish-button:active {
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #004494;
+}
