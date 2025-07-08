@@ -11,7 +11,7 @@ Features:
 * Finish: A handler page that sets a cookie to indicate the user has completed the game, clears all the session variables, and directs the user to the post survey.
 * Thanks: a final page displayed once the game is fully completed that thanks the user for participating and reminds them of who to contact should they have any further questions.
 
-I opted to use javascript instead of something like jquery becuase the game is relativley straightforward and doesnt use a lot of things like animation, I didnt want to load lots of dependencies that I wasnt going to use
-
 The main functionality of the interface and the backend logic is handled in the script file. Which can be found inside /javascript/script.js and is also further commented there.
+
+If you wish to run this on your own, you will need to fill in the connectionString.php form located in /includes with your own MySQLi database details.
 
